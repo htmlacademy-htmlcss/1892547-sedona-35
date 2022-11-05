@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
-    <link rel="stylesheet" href="styles/main.css">
-  </head>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -110,9 +109,9 @@
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <label class="visually-hidden" for="from">От</label>
-              <input class="control-input" type="text" name="from" id="from" min="0" value="0" placeholder="от">
-              <label class="visually-hidden" for="from">До</label>
-              <input class="control-input" type="text" name="to" id="to" max="9000" value="9000" placeholder="до">
+              <input class="control-input" type="number" name="from" id="from" min="0" value="0" placeholder="от">
+              <label class="visually-hidden" for="to">До</label>
+              <input class="control-input" type="number" name="to" id="to" max="9000" value="9000" placeholder="до">
               <button class="control-input" type="button">Управление нижней границей стоимости</button>
               <button class="control-input" type="button">Управление верхней границей стоимости</button>
             </fieldset>
@@ -288,3 +287,5 @@
       </section>
     </footer>
   </body>
+
+</html>
