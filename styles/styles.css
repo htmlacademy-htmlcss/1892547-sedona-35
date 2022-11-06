@@ -35,6 +35,7 @@ body {
   flex-direction: column;
   flex-grow: 1;
   background-color: #ffffff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -65,13 +66,24 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 20px;
 }
 
 .main-header {
   display: flex;
   justify-content: center;
   color: #000000;
+}
+
+.inner-header {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: #756157;
+  color: #ffffff;
+  background-image: url("../img/catalog-header-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
 }
 
 .inner-header-title {
@@ -88,18 +100,11 @@ body {
   margin: 0 auto;
 }
 
-.inner-header {
-  display: flex;
-  background-color: #756157;
-  color: #ffffff;
-  background-image: url("../img/catalog-header-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .inner-header-container {
-  margin: 70px;
+  width: 1060px;
   margin-top: 35px;
+  margin-bottom: 70px;
 }
 
 .breadcrumbs {
@@ -107,12 +112,23 @@ body {
   list-style: none;
   font-size: 16px;
   margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.breadcrumbs-item:first-child {
+  width: 13px;
+  height: 15px;
+  outline: 1px solid red;
+  margin-right: 28px;
 }
 
 .breadcrumbs-link {
   text-decoration: none;
   color: #ffffff;
 }
+
 
 .description {
   margin: 0;
@@ -235,12 +251,6 @@ body {
   display: flex;
 }
 
-.view-list {
-  display: flex;
-  list-style: none;
-  margin: 0;
-}
-
 .card {
   display: flex;
   min-height: 384px;
@@ -292,6 +302,8 @@ body {
 
 .catalog-filter-group {
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .catalog-filter-list {
@@ -300,8 +312,37 @@ body {
   padding: 0;
 }
 
-.sorting {
+.catalog-container {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.catalog-title {
+  margin-right: 200px;
+}
+
+.select-control {
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  width: 292px;
+}
+
+.view-list {
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.view-item {
+  width: 48px;
+  height: 48px;
+  outline: 1px solid red;
+}
+
+.view-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .hotels-list {
@@ -316,9 +357,14 @@ body {
 .hotel-card {
   box-sizing: border-box;
   width: 340px;
-  text-align: center;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
+  padding: 20px;
+}
+
+.hotel-card-image-link {
+  display: block;
+  margin-bottom: 16px;
 }
 
 .hotel-card-title-link {
@@ -329,23 +375,84 @@ body {
   line-height: 28px;
 }
 
+.hotel-card-title {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-container:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.card-container p {
+  margin: 0;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 .favorite-button {
   background-color: #82B3D3;
 }
 
+.hotel-card-rating {
+  width: 140px;
+}
+
 .rating-total {
+  color: #000000;
   background: #F2F2F2;
-  border-radius: 4px;
-  padding-top: 9px;
-  padding-bottom: 8px;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+}
+
+.pagination-container {
+  margin-top: 80px;
 }
 
 .pagination {
   display: flex;
   list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: #82B3D3;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.pagination-current {
+  background: #F2F2F2;
+  color: #000000;
+}
+
+.pagination-dots {
+  background: none;
+  color: #000000;
 }
 
 .favorite-button--active {
@@ -383,6 +490,7 @@ body {
 
 .order-title {
   margin-top: 96px;
+  margin-bottom: 20px;
 }
 
 .order-description {
@@ -418,6 +526,7 @@ body {
 .newsletter-title {
   color: #ffffff;
   margin-top: 96px;
+  margin-bottom: 20px;
 }
 
 .newsletter-description {
