@@ -85,6 +85,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   align-items: center;
+  object-fit: contain;
 }
 
 .inner-header-title {
@@ -213,6 +214,7 @@ body {
 .main-hero-image {
   padding-top: 52px;
   padding-bottom: 83px;
+  object-fit: contain;
 }
 
 .main-hero__title {
@@ -252,6 +254,10 @@ body {
 
 .advantages-text-block {
   gap: 30px
+}
+
+.feature-image {
+  object-fit: contain;
 }
 
 .feature-image-1 {
@@ -424,8 +430,7 @@ body {
 
 .hotel-card {
   box-sizing: border-box;
-  width: 340px;
-  border: 1px solid #E6E6E6;
+  outline: 1px solid #E6E6E6;
   border-radius: 4px;
   padding: 20px;
 }
@@ -433,6 +438,12 @@ body {
 .hotel-card-image-link {
   display: block;
   margin-bottom: 16px;
+  width: 300px;
+}
+
+.hotel-card-image {
+  display: block;
+  object-fit: contain;
 }
 
 .hotel-card-title-link {
@@ -588,6 +599,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  object-fit: contain;
 }
 
 .inner-newsletter {
