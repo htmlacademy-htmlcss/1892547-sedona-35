@@ -399,6 +399,8 @@ body {
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 20px;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .view-list {
@@ -631,6 +633,7 @@ body {
   border: none;
   width: 452px;
   padding: 14px 20px;
+  font-size: 18px;
   line-height: 24px;
   background: #F2F2F2;
   border-radius: 4px 0px 0px 4px;
