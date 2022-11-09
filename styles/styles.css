@@ -291,7 +291,7 @@ body {
 
 .header-logo img {
   position: absolute;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .navigation-link-button {
@@ -497,7 +497,71 @@ body {
   margin-bottom: 32px;
 }
 
+.filter-label {
+  display: block;
+  position: relative;
+  padding-left: 36px
+}
+
+.filter-label:hover {
+  opacity: 0.6;
+}
+
+.filter-label:active {
+  opacity: 0.3;
+}
+
+.filter-input:focus-visible+.filter-mark {
+  outline: 3px solid #83B3D3;
+}
+
+.filter-mark {
+  position: absolute;
+  background: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  left: 0;
+}
+
+.filter-input[type="checkbox"]+.filter-mark {
+  border-radius: 4px;
+}
+
+.filter-input[type="radio"]+.filter-mark {
+  border-radius: 50%;
+}
+
+.filter-input[type="checkbox"]:checked+.filter-mark::after {
+  display: block;
+  background-image: url("../img/checkbox-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  content: "";
+  top: 6px;
+  left: 4px;
+  width: 13px;
+  height: 10px;
+}
+
+.filter-input[type="radio"]:checked+.filter-mark::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #3F5E72;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}
+
+.price-range-inputs {
+  display: flex;
+}
+
 .price-input {
+  font: inherit;
   box-sizing: border-box;
   border: none;
   width: 143px;
@@ -506,16 +570,86 @@ body {
   font-size: 18px;
   font-weight: 700;
   background: #F2F2F2;
-  margin-right: 2px;
-  margin-bottom: 26px;
+  appearance: textfield;
+}
+
+.price-input::placeholder {
+  color: #000000;
+}
+
+.price-input::-webkit-outer-spin-button,
+.price-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.price-input:hover {
+  background: #E6E6E6;
+}
+
+.price-input:focus-visible {
+  background: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.price-input:active {
+  background: #F2F2F2;
+  outline: 2px solid #000000;
 }
 
 .price-input-from {
   border-radius: 4px 0px 0px 4px;
+  margin-right: 2px;
 }
 
 .price-input-to {
   border-radius: 0px 4px 4px 0px;
+}
+
+.price-range-controls {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 48px;
+}
+
+.price-range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.price-control {
+  position: absolute;
+  border: none;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.price-control:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.price-control:focus-visible {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.price-control:active {
+  border: 2px solid #83B3D3;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.price-min-control {
+  top: -8px;
+}
+
+.price-max-control {
+  top: -8px;
+  right: 0;
 }
 
 .filter-buttons-container {
@@ -524,6 +658,7 @@ body {
   width: 191px;
   margin-top: 56px;
   justify-content: space-between;
+  margin-left: auto;
 }
 
 .filter-button {
@@ -565,24 +700,16 @@ body {
 
 .select-control {
   border: none;
-  position: relative;
   outline: 2px solid #E5E5E5;
   border-radius: 4px;
+  background-image: url("../img/select-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
   width: 292px;
-  padding: 14px 20px;
+  padding: 14px 35px 14px 20px;
   font-size: 18px;
   appearance: none;
 }
-
-/* .select-control::before {
-  position: absolute;
-  content: "";
-  width: 12px;
-  height: 8px;
-  background-image: url("../img/select-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-} */
 
 .select-control:hover,
 .select-control:focus-visible {
@@ -876,6 +1003,7 @@ body {
 }
 
 .newsletter-input {
+  font: inherit;
   border: none;
   width: 452px;
   padding: 14px 20px;

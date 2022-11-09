@@ -73,20 +73,23 @@
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="filter-label">
-                        <input class="filter-input" type="checkbox" name="swimming-pool" checked>
-                        Бассейн
+                        <input class="filter-input visually-hidden" type="checkbox" name="swimming-pool" checked>
+                        <span class="filter-mark"></span>
+                        <span class="filter-name">Бассейн</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="filter-label">
-                        <input class="filter-input" type="checkbox" name="parking" checked>
-                        Парковка
+                        <input class="filter-input visually-hidden" type="checkbox" name="parking" checked>
+                        <span class="filter-mark"></span>
+                        <span class="filter-name">Парковка</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="filter-label">
-                        <input class="filter-input" type="checkbox" name="wi-fi">
-                        Wi-Fi
+                        <input class="filter-input visually-hidden" type="checkbox" name="wi-fi">
+                        <span class="filter-mark"></span>
+                        <span class="filter-name">Wi-Fi</span>
                       </label>
                     </li>
                   </ul>
@@ -96,20 +99,23 @@
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="filter-label">
-                        <input class="filter-input" type="radio" name="housing-group" checked>
-                        Гостиница
+                        <input class="filter-input visually-hidden" type="radio" name="housing-group" checked>
+                        <span class="filter-mark"></span>
+                        <span class="filter-name">Гостиница</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="filter-label">
-                        <input class="filter-input" type="radio" name="housing-group">
-                        Мотель
+                        <input class="filter-input visually-hidden" type="radio" name="housing-group">
+                        <span class="filter-mark"></span>
+                        <span class="filter-name">Мотель</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="filter-label">
-                        <input class="filter-input" type="radio" name="housing-group">
-                        Апартаменты
+                        <input class="filter-input visually-hidden" type="radio" name="housing-group">
+                        <span class="filter-mark"></span>
+                        <span class="filter-name">Апартаменты</span>
                       </label>
                     </li>
                   </ul>
@@ -118,14 +124,22 @@
               <div class="catalog-filter-right">
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                  <label class="visually-hidden" for="from">От</label>
-                  <input class="price-input price-input-from" type="number" name="from" id="from" min="0" value="0"
-                    placeholder="от">
-                  <label class="visually-hidden" for="to">До</label>
-                  <input class="price-input price-input-to" type="number" name="to" id="to" max="9000" value="9000"
-                    placeholder="до">
-                  <button class="slider-control" type="button">Управление нижней границей стоимости</button>
-                  <button class="slider-control" type="button">Управление верхней границей стоимости</button>
+                  <div class="price-range">
+                    <div class="price-range-inputs">
+                      <label class="visually-hidden" for="from">От</label>
+                      <input class="price-input price-input-from" type="number" name="from" id="from" min="0"
+                        placeholder="0">
+                      <label class="visually-hidden" for="to">До</label>
+                      <input class="price-input price-input-to" type="number" name="to" id="to" max="9000"
+                        placeholder="9000">
+                    </div>
+                    <div class="price-range-controls">
+                      <div class="price-range-bar" style="left: 0px; width: 226px">
+                        <button class="price-control price-min-control" type="button"></button>
+                        <button class="price-control price-max-control" type="button"></button>
+                      </div>
+                    </div>
+                  </div>
                 </fieldset>
                 <div class="filter-buttons-container">
                   <button class="button button-blue filter-button" type="submit">Применить</button>
