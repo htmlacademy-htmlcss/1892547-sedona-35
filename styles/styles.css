@@ -346,11 +346,12 @@ body {
 }
 
 .main-title {
-  margin: 69px 290px 25px 290px;
+  margin-top: 69px;
+  margin-bottom: 25px;
 }
 
 .main-description {
-  margin: 0 274px 90px 275px;
+  margin-bottom: 90px;
 }
 
 .features-list {
@@ -1258,6 +1259,7 @@ body {
   background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
+  appearance: textfield;
 }
 
 .input-wrapper-text:hover .modal-input {
@@ -1404,7 +1406,7 @@ body {
   box-sizing: border-box;
   width: 256px;
   margin-top: 28px;
-  padding: 19px 18px 20px 22px;
+  padding: 19px 18px 25px 22px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
