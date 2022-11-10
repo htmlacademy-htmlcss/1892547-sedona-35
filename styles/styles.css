@@ -692,7 +692,6 @@ body {
   flex-direction: column;
   width: 191px;
   margin-top: 56px;
-  justify-content: space-between;
   margin-left: auto;
 }
 
@@ -705,7 +704,7 @@ body {
 
 .filter-reset {
   background: none;
-  padding-bottom: 4px;
+  margin-top: 32px;
 }
 
 .filter-reset:hover,
