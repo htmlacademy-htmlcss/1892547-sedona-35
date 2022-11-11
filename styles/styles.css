@@ -278,7 +278,7 @@ body {
 }
 
 .navigation-user .navigation-link:hover {
-  opacity: 0.7;
+  background-size: 22px auto;
 }
 
 .search-link {
