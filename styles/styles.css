@@ -537,6 +537,7 @@ body {
   position: relative;
   padding-left: 36px;
   cursor: pointer;
+  max-width: 200px;
 }
 
 .filter-label:hover {
