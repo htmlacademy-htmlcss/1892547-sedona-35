@@ -533,7 +533,8 @@ body {
 }
 
 .filter-label {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   padding-left: 36px;
   cursor: pointer;
